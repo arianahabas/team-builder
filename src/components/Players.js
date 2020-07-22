@@ -8,10 +8,10 @@ export default function Player (props) {
     }
     
     return (  
-        <div>
-            <h2>{details.name}</h2>
-            <p>{details.number}</p>
-            <p>{details.position}</p>
+        <div className='card'>
+            <h2>Name: {details.name}</h2>
+            <p>Jersey Number: {details.number}</p>
+            <p>Position: {details.position}</p>
         </div>
     )
 }

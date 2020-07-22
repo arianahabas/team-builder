@@ -1,0 +1,35 @@
+body{
+    background-color:#011638;
+    font-family: 'Graduate', cursive;
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.form{
+    border: 3px solid #EEC643;
+    color: #EEF0F2;
+    background-color: #0D21A1;
+    padding: 50px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 60vw;
+    text-align: center;
+
+}
+.card{
+    background-color: #EEF0F2;
+    color:#0D21A1;
+    padding: 30px;
+    margin: 10px;
+    border: 10px solid #EEC643;
+
+}
+.playerCard{
+    margin: 20px; 
+    border: 4px dashed  #EEF0F2;
+
+ 
+}

@@ -16,14 +16,14 @@ export default function PlayerForm (props) {
     return (
         <div>
         <form onSubmit = {onSubmit}>
-            <h1>Join the Team!</h1>
+            <h1>Join the Team! 🏀</h1>
           <label htmlFor='nameInput'></label>
           <input
           id='nameInput'
           name='name'
           type='text'
           maxLength='20'
-          placeholder='Name'
+          placeholder='Full Name'
           value={values.name}
           onChange={onChange}
           />

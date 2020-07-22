@@ -1,14 +1,13 @@
 
 import React, { useState, useEffect } from 'react'
-import { v4 as uuid } from 'uuid'
 import Players from './Players'
 import PlayerForm from './PlayerForm'
 
+
 const initialPlayersList = [
   {
-    id: uuid(),
     name: 'Michael Jordan',
-    number: '3',
+    number: '23',
     position: 'Guard',
   },
 ]
@@ -24,7 +23,7 @@ const fakeAxiosGet = () => {
   return Promise.resolve({ status: 200, success: true, data: initialPlayersList })
 }
 const fakeAxiosPost = (url, { name, number, position }) => {
-  const newPlayer = { id: uuid(), name, number, position }
+  const newPlayer = { name, number, position }
   return Promise.resolve({ status: 200, success: true, data: newPlayer })
 }
 export default function App () {
@@ -58,12 +57,15 @@ export default function App () {
     }, [])
 
   return(
-    <div>
-    <PlayerForm
-    values ={formValues}
-    update={updateForm}
-    submit={submitForm}
-    />
+    <div className='App'>
+      <div className='form'>
+        <PlayerForm
+        values ={formValues}
+        update={updateForm}
+        submit={submitForm}
+        />
+    </div>
+    <div className='playerCard'>
       {
         players.map(player => {
           return (
@@ -71,7 +73,7 @@ export default function App () {
           )
         })
       }
-
+      </div>
     </div>
   )
 }
